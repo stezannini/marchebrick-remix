@@ -34,10 +34,14 @@ export const Route = createRootRoute({
       { title: "Marchebrick — Mattoncini, eventi e passione nelle Marche" },
       { name: "description", content: "Marchebrick è il gruppo marchigiano di appassionati di mattoncini: eventi, esposizioni e iniziative sociali in tutta Italia." },
       { name: "author", content: "Marchebrick" },
-      { property: "og:title", content: "Marchebrick" },
-      { property: "og:description", content: "Eventi, esposizioni e community di mattoncini nelle Marche." },
+      { property: "og:title", content: "Marchebrick — Mattoncini, eventi e passione nelle Marche" },
+      { property: "og:description", content: "Marchebrick è il gruppo marchigiano di appassionati di mattoncini: eventi, esposizioni e iniziative sociali in tutta Italia." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Marchebrick — Mattoncini, eventi e passione nelle Marche" },
+      { name: "twitter:description", content: "Marchebrick è il gruppo marchigiano di appassionati di mattoncini: eventi, esposizioni e iniziative sociali in tutta Italia." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/11831100-deb0-49ed-ae8c-489534f924c4/id-preview-1b65de5d--f188314e-556b-401c-962a-eb4a4513f5b8.lovable.app-1776704292162.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/11831100-deb0-49ed-ae8c-489534f924c4/id-preview-1b65de5d--f188314e-556b-401c-962a-eb4a4513f5b8.lovable.app-1776704292162.png" },
     ],
     links: [
       {
