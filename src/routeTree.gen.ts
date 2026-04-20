@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SocialeRouteImport } from './routes/sociale'
+import { Route as EventiRouteImport } from './routes/eventi'
+import { Route as ContattiRouteImport } from './routes/contatti'
+import { Route as ChiSiamoRouteImport } from './routes/chi-siamo'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SocialeRoute = SocialeRouteImport.update({
+  id: '/sociale',
+  path: '/sociale',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventiRoute = EventiRouteImport.update({
+  id: '/eventi',
+  path: '/eventi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContattiRoute = ContattiRouteImport.update({
+  id: '/contatti',
+  path: '/contatti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChiSiamoRoute = ChiSiamoRouteImport.update({
+  id: '/chi-siamo',
+  path: '/chi-siamo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,72 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/chi-siamo': typeof ChiSiamoRoute
+  '/contatti': typeof ContattiRoute
+  '/eventi': typeof EventiRoute
+  '/sociale': typeof SocialeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/chi-siamo': typeof ChiSiamoRoute
+  '/contatti': typeof ContattiRoute
+  '/eventi': typeof EventiRoute
+  '/sociale': typeof SocialeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/chi-siamo': typeof ChiSiamoRoute
+  '/contatti': typeof ContattiRoute
+  '/eventi': typeof EventiRoute
+  '/sociale': typeof SocialeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/chi-siamo' | '/contatti' | '/eventi' | '/sociale'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/chi-siamo' | '/contatti' | '/eventi' | '/sociale'
+  id: '__root__' | '/' | '/chi-siamo' | '/contatti' | '/eventi' | '/sociale'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ChiSiamoRoute: typeof ChiSiamoRoute
+  ContattiRoute: typeof ContattiRoute
+  EventiRoute: typeof EventiRoute
+  SocialeRoute: typeof SocialeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sociale': {
+      id: '/sociale'
+      path: '/sociale'
+      fullPath: '/sociale'
+      preLoaderRoute: typeof SocialeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eventi': {
+      id: '/eventi'
+      path: '/eventi'
+      fullPath: '/eventi'
+      preLoaderRoute: typeof EventiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contatti': {
+      id: '/contatti'
+      path: '/contatti'
+      fullPath: '/contatti'
+      preLoaderRoute: typeof ContattiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chi-siamo': {
+      id: '/chi-siamo'
+      path: '/chi-siamo'
+      fullPath: '/chi-siamo'
+      preLoaderRoute: typeof ChiSiamoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +121,20 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ChiSiamoRoute: ChiSiamoRoute,
+  ContattiRoute: ContattiRoute,
+  EventiRoute: EventiRoute,
+  SocialeRoute: SocialeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
