@@ -24,7 +24,7 @@ function ChiSiamoPage() {
         <div className="rounded-2xl border border-border bg-card p-6">
           <h2 className="text-2xl font-semibold text-primary">La nostra missione</h2>
           <p className="mt-3 text-muted-foreground">
-            Diffondere la cultura del costruire creativamente, coinvolgendo bambini, famiglie e collezionisti in eventi inclusivi e divertenti.
+            Diffondere la cultura del costruire creativamente, coinvolgendo bambini, famiglie e collezionisti in eventi inclusivi e divertenti. E poi altro...
           </p>
         </div>
         <div className="rounded-2xl border border-border bg-card p-6">
