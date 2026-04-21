@@ -27,7 +27,7 @@ export function SiteFooter() {
             <a href="https://www.facebook.com/marchebrick/" target="_blank" rel="noreferrer" aria-label="Facebook" className="rounded-full bg-background p-2 text-primary shadow-sm hover:bg-primary hover:text-primary-foreground"><Facebook className="h-4 w-4" /></a>
             <a href="https://www.instagram.com/marchebrick/" target="_blank" rel="noreferrer" aria-label="Instagram" className="rounded-full bg-background p-2 text-primary shadow-sm hover:bg-primary hover:text-primary-foreground"><Instagram className="h-4 w-4" /></a>
             <a href="https://www.youtube.com/@MarcheBrick" target="_blank" rel="noreferrer" aria-label="YouTube" className="rounded-full bg-background p-2 text-primary shadow-sm hover:bg-primary hover:text-primary-foreground"><Youtube className="h-4 w-4" /></a>
-            <a href="mailto:info@marchebrick.it" aria-label="Email" className="rounded-full bg-background p-2 text-primary shadow-sm hover:bg-primary hover:text-primary-foreground"><Mail className="h-4 w-4" /></a>
+            <a href="mailto:marchebrick@gmail.com" aria-label="Email" className="rounded-full bg-background p-2 text-primary shadow-sm hover:bg-primary hover:text-primary-foreground"><Mail className="h-4 w-4" /></a>
           </div>
         </div>
       </div>
