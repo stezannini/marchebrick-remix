@@ -32,7 +32,7 @@ function ContattiPage() {
             </div>
             <div>
               <h3 className="font-semibold">Email</h3>
-              <a href="mailto:info@marchebrick.it" className="text-sm text-muted-foreground hover:text-primary">info@marchebrick.it</a>
+              <a href="mailto:marchebrick@gmail.com" className="text-sm text-muted-foreground hover:text-primary">marchebrick@gmail.com</a>
             </div>
           </div>
           <div className="flex gap-4">
