@@ -24,8 +24,8 @@ export function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
-              activeProps={{ className: "rounded-md px-3 py-2 text-sm font-semibold text-primary bg-secondary" }}
+              className="font-display rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider text-foreground/80 transition-colors hover:bg-secondary hover:text-primary"
+              activeProps={{ className: "font-display rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider text-primary bg-secondary" }}
               activeOptions={{ exact: true }}
             >
               {item.label}
@@ -54,8 +54,8 @@ export function SiteHeader() {
               key={item.to}
               to={item.to}
               onClick={() => setOpen(false)}
-              className="rounded-md px-3 py-2 text-sm font-medium hover:bg-secondary"
-              activeProps={{ className: "rounded-md px-3 py-2 text-sm font-semibold text-primary bg-secondary" }}
+              className="font-display rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wider hover:bg-secondary"
+              activeProps={{ className: "font-display rounded-md px-3 py-2 text-sm font-bold uppercase tracking-wider text-primary bg-secondary" }}
             >
               {item.label}
             </Link>
