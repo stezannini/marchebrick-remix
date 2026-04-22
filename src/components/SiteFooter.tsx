@@ -7,7 +7,7 @@ export function SiteFooter() {
     <footer className="mt-24 border-t border-border bg-secondary/40">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-3 lg:px-8">
         <div>
-          <img src={logo} alt="Marchebrick" className="h-14 w-auto" />
+          <img src={logo} alt="Marchebrick" className="h-21 w-auto" style={{ height: "5.25rem" }} />
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
             Gruppo di appassionati di mattoncini delle Marche. Eventi, esposizioni e iniziative sociali in tutta Italia.
           </p>
