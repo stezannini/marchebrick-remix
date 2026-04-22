@@ -36,7 +36,7 @@ function HomePage() {
             Marchebrick riunisce appassionati di mattoncini delle Marche e d'Italia: eventi, esposizioni, contest e iniziative per il sociale.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/eventi" className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-accent-foreground brick-shadow transition-transform hover:-translate-y-0.5">
+            <Link to="/eventi" className="btn-lego inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold transition-transform hover:-translate-y-0.5">
               Scopri gli eventi <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/chi-siamo" className="inline-flex items-center gap-2 rounded-lg border border-primary-foreground/40 bg-primary-foreground/10 px-6 py-3 font-semibold text-primary-foreground backdrop-blur transition-colors hover:bg-primary-foreground/20">
@@ -82,7 +82,7 @@ function HomePage() {
               <article key={e.slug} className="group overflow-hidden rounded-2xl bg-card shadow-sm transition-shadow hover:shadow-xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img src={e.image} alt={e.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <span className="absolute left-3 top-3 rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">{e.category}</span>
+                  <span className="tag-lego absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold">{e.category}</span>
                 </div>
                 <div className="p-5">
                   <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{e.date}</p>
@@ -106,7 +106,7 @@ function HomePage() {
               </p>
             </div>
             <div className="flex lg:justify-end">
-              <Link to="/contatti" className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-accent-foreground brick-shadow">
+              <Link to="/contatti" className="btn-lego inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold">
                 Contattaci <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
