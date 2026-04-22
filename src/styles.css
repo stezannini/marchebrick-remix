@@ -190,7 +190,7 @@
     background-color: color-mix(in oklab, var(--lego-dark-red) 95%, transparent);
   }
   .tag-lego {
-    background-color: var(--lego-sand-green);
-    color: var(--lego-sand-green-foreground);
+    background-color: color-mix(in oklab, var(--lego-dark-red) 85%, transparent);
+    color: oklch(1 0 0);
   }
 }
