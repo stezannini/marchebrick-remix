@@ -39,7 +39,7 @@ function HomePage() {
             <Link to="/eventi" className="btn-lego inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold transition-transform hover:-translate-y-0.5">
               Scopri gli eventi <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link to="/chi-siamo" className="inline-flex items-center gap-2 rounded-lg border border-primary-foreground/40 bg-primary-foreground/10 px-6 py-3 font-semibold text-primary-foreground backdrop-blur transition-colors hover:bg-primary-foreground/20">
+            <Link to="/chi-siamo" className="btn-lego inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold transition-transform hover:-translate-y-0.5">
               Chi siamo
             </Link>
           </div>
