@@ -68,6 +68,9 @@
   --color-brick-yellow: var(--brick-yellow);
   --color-brick-red: var(--brick-red);
   --color-brick-blue: var(--brick-blue);
+  --color-lego-dark-red: var(--lego-dark-red);
+  --color-lego-sand-green: var(--lego-sand-green);
+  --color-lego-sand-green-foreground: var(--lego-sand-green-foreground);
 }
 
 :root {
@@ -96,6 +99,10 @@
   --brick-yellow: oklch(0.85 0.17 90);
   --brick-red: oklch(0.58 0.22 28);
   --brick-blue: oklch(0.55 0.16 245);
+  /* LEGO official palette */
+  --lego-dark-red: oklch(0.45 0.18 28);
+  --lego-sand-green: oklch(0.72 0.07 155);
+  --lego-sand-green-foreground: oklch(0.22 0.05 155);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -172,5 +179,18 @@
   }
   .brick-shadow {
     box-shadow: 0 4px 0 0 color-mix(in oklab, var(--brand) 25%, transparent), 0 10px 30px -10px color-mix(in oklab, var(--brand) 30%, transparent);
+  }
+  .btn-lego {
+    background-color: color-mix(in oklab, var(--lego-dark-red) 85%, transparent);
+    color: oklch(1 0 0);
+    box-shadow: 0 4px 0 0 color-mix(in oklab, var(--lego-dark-red) 35%, transparent), 0 10px 30px -10px color-mix(in oklab, var(--lego-dark-red) 35%, transparent);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  .btn-lego:hover {
+    background-color: color-mix(in oklab, var(--lego-dark-red) 95%, transparent);
+  }
+  .tag-lego {
+    background-color: var(--lego-sand-green);
+    color: var(--lego-sand-green-foreground);
   }
 }

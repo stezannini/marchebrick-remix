@@ -49,7 +49,7 @@ function EventiPage() {
           <article key={e.slug} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-xl">
             <div className="relative aspect-[4/3] overflow-hidden">
               <img src={e.image} alt={e.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <span className="absolute left-3 top-3 rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">{e.category}</span>
+              <span className="tag-lego absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold">{e.category}</span>
             </div>
             <div className="p-5">
               <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{e.date}</p>
