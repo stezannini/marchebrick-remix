@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Facebook, Instagram, Youtube } from "lucide-react";
-import logo from "@/assets/marchebrick-logo.png";
+import logo from "@/assets/marchebrick-logo-horizontal.png";
 
 const nav = [
   { to: "/", label: "Home" },
