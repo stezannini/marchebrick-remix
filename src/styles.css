@@ -192,5 +192,6 @@
   .tag-lego {
     background-color: color-mix(in oklab, var(--lego-dark-red) 85%, transparent);
     color: oklch(1 0 0);
+    border: 1px solid oklch(1 0 0);
   }
 }
