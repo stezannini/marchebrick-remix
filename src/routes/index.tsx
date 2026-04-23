@@ -36,10 +36,10 @@ function HomePage() {
             Marchebrick riunisce appassionati di mattoncini delle Marche e d'Italia: eventi, esposizioni, contest e iniziative per il sociale.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/eventi" className="btn-lego inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold transition-transform hover:-translate-y-0.5">
+            <Link to="/eventi" className="btn-lego inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold transition-transform hover:-translate-y-0.5 border-2 border-white text-white bg-transparent hover:bg-white hover:text-black">
               Scopri gli eventi <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link to="/chi-siamo" className="btn-lego inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold transition-transform hover:-translate-y-0.5">
+            <Link to="/chi-siamo" className="btn-lego inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold transition-transform hover:-translate-y-0.5 border-2 border-white text-white bg-transparent hover:bg-white hover:text-black">
               Chi siamo
             </Link>
           </div>
