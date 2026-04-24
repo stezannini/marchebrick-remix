@@ -35,8 +35,8 @@ function EventiPage() {
             onClick={() => setFilter(c)}
             className={
               filter === c
-                ? "rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
-                : "rounded-full bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary/70"
+                ? "rounded-full border-2 border-black bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
+                : "rounded-full border-2 border-black bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary/70"
             }
           >
             {c}
