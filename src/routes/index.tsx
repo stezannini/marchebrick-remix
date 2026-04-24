@@ -84,7 +84,7 @@ function HomePage() {
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {latest.map((e) => (
-              <article key={e.slug} className="group overflow-hidden rounded-2xl bg-card shadow-sm transition-shadow hover:shadow-xl">
+              <article key={e.slug} className="group overflow-hidden rounded-2xl border-2 border-black bg-card shadow-sm transition-shadow hover:shadow-xl">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img src={e.image} alt={e.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <span className="tag-lego absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold">{e.category}</span>
@@ -111,7 +111,7 @@ function HomePage() {
               </p>
             </div>
             <div className="flex lg:justify-end">
-              <Link to="/contatti" className="btn-lego inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold">
+              <Link to="/contatti" className="btn-lego inline-flex items-center gap-2 rounded-lg border-2 border-white px-6 py-3 font-semibold">
                 Contattaci <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
