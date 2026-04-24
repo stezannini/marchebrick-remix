@@ -26,9 +26,14 @@ function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-24 lg:px-8 lg:py-32">
-          <span className="inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent-foreground">
-            Community AFOL · Marche
-          </span>
+          <div className="flex flex-wrap gap-2">
+            <span className="inline-flex items-center rounded-full border-2 border-white bg-black px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">
+              Community AFOL · Marche
+            </span>
+            <span className="inline-flex items-center rounded-full border-2 border-white bg-black px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">
+              RLUG · Recognized LEGO® User Group
+            </span>
+          </div>
           <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl">
             Costruiamo emozioni, un mattoncino alla volta.
           </h1>
