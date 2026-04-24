@@ -1,3 +1,5 @@
+import marinaBrickense2026 from "@/assets/events/marina-brickense-2026.jpg";
+
 export type EventItem = {
   slug: string;
   title: string;
@@ -8,6 +10,15 @@ export type EventItem = {
 };
 
 export const events: EventItem[] = [
+  {
+    slug: "marina-brickense-2026",
+    title: "Marina BRICKense 2026",
+    date: "18-19 Apr 2026",
+    category: "Eventi",
+    excerpt:
+      "Marchebrick torna a Marina Palmense, che per l'occasione diventa Brickense: opere originali, concorso piccoli costruttori, area sfuso e tante attività con i mattoncini.",
+    image: marinaBrickense2026,
+  },
   {
     slug: "model-expo-italy-2026",
     title: "Model Expo Italy 2026",
