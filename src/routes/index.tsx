@@ -57,9 +57,9 @@ function HomePage() {
           {[
             { icon: Calendar, title: "Eventi & Esposizioni", text: "Organizziamo e partecipiamo a manifestazioni in tutta Italia." },
             { icon: Users, title: "Una community", text: "AFOL, famiglie e curiosi: il mattoncino unisce tutte le età." },
-            { icon: Heart, title: "Sociale", text: "Iniziative benefiche e progetti per il territorio marchigiano." },
+            { icon: Heart, title: "Marchebrick per il sociale", text: "Iniziative benefiche e progetti per il territorio marchigiano." },
           ].map(({ icon: Icon, title, text }) => (
-            <div key={title} className="rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-lg">
+            <div key={title} className="rounded-2xl border-2 border-lego-dark-red bg-card p-6 transition-shadow hover:shadow-lg">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <Icon className="h-6 w-6" />
               </div>
@@ -71,7 +71,7 @@ function HomePage() {
       </section>
 
       {/* Latest events */}
-      <section className="brick-pattern bg-lego-sand-green/70 py-16">
+      <section className="bg-lego-sand-green/70 py-16">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="flex items-end justify-between gap-4">
             <div>
