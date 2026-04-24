@@ -71,14 +71,14 @@ function HomePage() {
       </section>
 
       {/* Latest events */}
-      <section className="brick-pattern bg-secondary/30 py-16">
+      <section className="brick-pattern bg-lego-sand-green/70 py-16">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <h2 className="text-3xl font-bold sm:text-4xl">Ultime news</h2>
-              <p className="mt-2 text-muted-foreground">Gli eventi più recenti della community Marchebrick.</p>
+              <h2 className="text-3xl font-bold sm:text-4xl text-lego-sand-green-foreground">Ultime news</h2>
+              <p className="mt-2 text-lego-sand-green-foreground/80">Gli eventi più recenti della community Marchebrick.</p>
             </div>
-            <Link to="/eventi" className="hidden items-center gap-1 text-sm font-semibold text-primary hover:underline sm:inline-flex">
+            <Link to="/eventi" className="hidden items-center gap-1 text-sm font-semibold text-lego-sand-green-foreground hover:underline sm:inline-flex">
               Tutti gli eventi <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
