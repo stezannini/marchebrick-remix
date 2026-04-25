@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { events } from "@/data/events";
 
-export const Route = createFileRoute("/eventi/")({
+export const Route = createFileRoute("/eventi/$slug")({
   loader: ({ params }) => {
     const event = events.find((e) => e.slug === params.slug);
     if (!event) throw notFound();
