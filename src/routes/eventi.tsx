@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { events } from "@/data/events";
 
@@ -46,7 +47,12 @@ function EventiPage() {
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((e) => (
-          <article key={e.slug} className="group overflow-hidden rounded-2xl border-2 border-black bg-card shadow-sm transition-shadow hover:shadow-xl">
+          <Link
+            key={e.slug}
+            to="/eventi/$slug"
+            params={{ slug: e.slug }}
+            className="group block overflow-hidden rounded-2xl border-2 border-black bg-card shadow-sm transition-shadow hover:shadow-xl"
+          >
             <div className="relative aspect-[4/3] overflow-hidden">
               <img src={e.image} alt={e.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <span className="tag-lego absolute left-3 top-3 rounded-full border-2 border-black px-3 py-1 text-xs font-semibold">{e.category}</span>
@@ -56,7 +62,7 @@ function EventiPage() {
               <h3 className="mt-2 text-lg font-semibold leading-snug">{e.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{e.excerpt}</p>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </div>
