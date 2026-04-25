@@ -7,6 +7,8 @@ export type EventItem = {
   category: "Eventi" | "Girovagando" | "Sociale";
   excerpt: string;
   image: string;
+  description?: string;
+  gallery?: string[];
 };
 
 export const events: EventItem[] = [
