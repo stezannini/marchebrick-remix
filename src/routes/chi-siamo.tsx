@@ -34,9 +34,32 @@ function ChiSiamoPage() {
           </p>
         </div>
       </div>
-      <p className="mt-12 text-lg text-muted-foreground text-justify">
-        Marchebrick è la community di riferimento nelle Marche per tutti gli appassionati di mattoncini LEGO® (AFOL). Uniamo creatività, divertimento e condivisione per trasformare una passione in esperienze coinvolgenti per tutte le età. Organizziamo eventi, esposizioni e attività interattive dove fantasia e ingegno prendono vita: dai grandi diorami alle costruzioni dal vivo, ogni occasione è pensata per stupire, ispirare e far partecipare.
-      </p>
+      <div className="mt-12 text-lg text-muted-foreground text-justify whitespace-pre-line">
+        <strong className="text-xl text-foreground block mb-4">Consiglio direttivo</strong>
+        Il Consiglio Direttivo è l’organo che guida e coordina le attività di MarcheBrick, promuovendo iniziative, eventi e progetti per la crescita dell’associazione.
+
+        È composto da 5 membri eletti dall’Assemblea dei soci, in carica per 3 anni:
+
+        Presidente: Stefano Zannini
+        Vicepresidente: Danilo Calcinari
+        Segretario: Michele Cocco
+        Tesoriere: David Lambertucci
+        Ambassador: Matteo Mobili
+
+        Tutte le cariche sono svolte a titolo volontario e gratuito, nel rispetto dei valori di condivisione, partecipazione e passione che caratterizzano MarcheBrick.
+
+        <strong className="text-xl text-foreground block mt-8 mb-4">Galateo dell’associazione</strong>
+        (linee guida e codice di condotta)
+
+        MarcheBrick si basa su rispetto, collaborazione e responsabilità condivisa.
+        Ci aspettiamo che ogni membro contribuisca in modo positivo alla community, mantenendo un comportamento corretto, inclusivo e costruttivo verso tutti.
+
+        Durante attività ed eventi, è richiesto spirito di squadra, puntualità e affidabilità, nel rispetto dei ruoli e dell’organizzazione. Ogni partecipante è invitato a collaborare attivamente, supportare gli altri e rappresentare la community in modo professionale verso il pubblico e gli organizzatori.
+
+        Non sono tollerati comportamenti offensivi, discriminatori o che possano danneggiare la community o i suoi membri.
+
+        Far parte di MarcheBrick significa condividere valori, passione e impegno nel costruire esperienze positive per tutti.
+      </div>
     </div>
   );
 }
