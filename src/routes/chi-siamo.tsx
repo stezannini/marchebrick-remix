@@ -23,15 +23,11 @@ function ChiSiamoPage() {
       <div className="mt-12 grid gap-8 md:grid-cols-2">
         <div className="rounded-2xl border border-border bg-card p-6">
           <h2 className="text-2xl font-semibold text-primary">MISSION</h2>
-          <p className="mt-3 text-lg text-muted-foreground text-justify">
-            Crediamo nel valore educativo del gioco e nella forza della collaborazione: per questo promuoviamo iniziative che stimolano creatività, socializzazione e apprendimento, coinvolgendo famiglie, scuole e appassionati.
-          </p>
+          <p className="mt-3 text-lg text-muted-foreground text-justify">Crediamo nel valore educativo del Gioco, e nella forza della collaborazione: per questo promuoviamo iniziative che stimolano la creatività, la socializzazione e l'apprendimento, coinvolgendo famiglie, scuole e appassionati.</p>
         </div>
         <div className="rounded-2xl border border-border bg-card p-6">
           <h2 className="text-2xl font-semibold text-primary">VALORI</h2>
-          <p className="mt-3 text-lg text-muted-foreground text-justify">
-            Comunità, creatività, condivisione e impegno verso il territorio: questi sono i pilastri che ci guidano in ogni evento.{"\n\n"}
-          </p>
+          <p className="mt-3 text-lg text-muted-foreground text-justify">Comunità, creatività, condivisione e impegno verso il territorio: questi sono i pilastri che ci guidano nella realizzazione di ogni evento.</p>
         </div>
       </div>
       <div className="mt-16 space-y-12">
