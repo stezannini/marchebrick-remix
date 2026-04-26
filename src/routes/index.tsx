@@ -56,7 +56,7 @@ function HomePage() {
         <div className="grid gap-6 md:grid-cols-3">
           {[
             { icon: Calendar, title: "Eventi & Esposizioni", text: "Organizziamo e partecipiamo a manifestazioni in tutta Italia.", to: "/eventi" as const },
-            { icon: Users, title: "Una community", text: "AFOL, famiglie e curiosi: il mattoncino unisce tutte le età.", to: "/chi-siamo" as const },
+            { icon: Users, title: "La nostra community", text: "AFOL, famiglie e curiosi: il mattoncino unisce tutte le età.", to: "/chi-siamo" as const },
             { icon: Heart, title: "Marchebrick per il sociale", text: "Iniziative benefiche e progetti per il territorio marchigiano.", to: "/sociale" as const },
           ].map(({ icon: Icon, title, text, to }) => (
             <Link key={title} to={to} className="block rounded-2xl border-2 border-lego-dark-red bg-card p-6 transition-shadow hover:shadow-lg">
