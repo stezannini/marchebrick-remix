@@ -22,14 +22,14 @@ function ChiSiamoPage() {
       </p>
       <div className="mt-12 grid gap-8 md:grid-cols-2">
         <div className="rounded-2xl border border-border bg-card p-6">
-          <h2 className="text-2xl font-semibold text-primary">La nostra missione</h2>
-          <p className="mt-3 text-muted-foreground text-justify">
+          <h2 className="text-2xl font-semibold text-primary">MISSION</h2>
+          <p className="mt-3 text-lg text-muted-foreground text-justify">
             Crediamo nel valore educativo del gioco e nella forza della collaborazione: per questo promuoviamo iniziative che stimolano creatività, socializzazione e apprendimento, coinvolgendo famiglie, scuole e appassionati.
           </p>
         </div>
         <div className="rounded-2xl border border-border bg-card p-6">
-          <h2 className="text-2xl font-semibold text-primary">I nostri valori</h2>
-          <p className="mt-3 text-muted-foreground text-justify">
+          <h2 className="text-2xl font-semibold text-primary">VALORI</h2>
+          <p className="mt-3 text-lg text-muted-foreground text-justify">
             Comunità, creatività, condivisione e impegno verso il territorio: questi sono i pilastri che ci guidano in ogni evento.{"\n\n"}
           </p>
         </div>
@@ -37,18 +37,23 @@ function ChiSiamoPage() {
       <div className="mt-16 space-y-12">
         <section>
           <h2 className="text-2xl font-semibold text-primary">Consiglio direttivo</h2>
-          <div className="mt-4 text-lg text-muted-foreground text-justify whitespace-pre-line">
-            Il Consiglio Direttivo è l’organo che guida e coordina le attività di MarcheBrick, promuovendo iniziative, eventi e progetti per la crescita dell’associazione.
-
-            È composto da 5 membri eletti dall’Assemblea dei soci, in carica per 3 anni:
-
-            Presidente: Stefano Zannini
-            Vicepresidente: Danilo Calcinari
-            Segretario: Michele Cocco
-            Tesoriere: David Lambertucci
-            Ambassador: Matteo Mobili
-
-            Tutte le cariche sono svolte a titolo volontario e gratuito, nel rispetto dei valori di condivisione, partecipazione e passione che caratterizzano MarcheBrick.
+          <div className="mt-4 text-lg text-muted-foreground space-y-4">
+            <p className="text-justify">
+              Il Consiglio Direttivo è l’organo che guida e coordina le attività di MarcheBrick, promuovendo iniziative, eventi e progetti per la crescita dell’associazione.
+            </p>
+            <p className="text-justify">
+              È composto da 5 membri eletti dall’Assemblea dei soci, in carica per 3 anni:
+            </p>
+            <ul className="space-y-1">
+              <li><strong className="font-semibold text-foreground">Presidente:</strong> Stefano Zannini</li>
+              <li><strong className="font-semibold text-foreground">Vicepresidente:</strong> Danilo Calcinari</li>
+              <li><strong className="font-semibold text-foreground">Segretario:</strong> Michele Cocco</li>
+              <li><strong className="font-semibold text-foreground">Tesoriere:</strong> David Lambertucci</li>
+              <li><strong className="font-semibold text-foreground">Ambassador:</strong> Matteo Mobili</li>
+            </ul>
+            <p className="text-justify">
+              Tutte le cariche sono svolte a titolo volontario e gratuito, nel rispetto dei valori di condivisione, partecipazione e passione che caratterizzano MarcheBrick.
+            </p>
           </div>
         </section>
 
