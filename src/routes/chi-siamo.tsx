@@ -34,6 +34,9 @@ function ChiSiamoPage() {
           </p>
         </div>
       </div>
+      <p className="mt-12 text-lg text-muted-foreground text-justify">
+        Marchebrick è la community di riferimento nelle Marche per tutti gli appassionati di mattoncini LEGO® (AFOL). Uniamo creatività, divertimento e condivisione per trasformare una passione in esperienze coinvolgenti per tutte le età. Organizziamo eventi, esposizioni e attività interattive dove fantasia e ingegno prendono vita: dai grandi diorami alle costruzioni dal vivo, ogni occasione è pensata per stupire, ispirare e far partecipare.
+      </p>
     </div>
   );
 }
