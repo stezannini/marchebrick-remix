@@ -11,10 +11,16 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SocialeRouteImport } from './routes/sociale'
 import { Route as EventiRouteImport } from './routes/eventi'
+import { Route as EnRouteImport } from './routes/en'
 import { Route as ContattiRouteImport } from './routes/contatti'
 import { Route as ChiSiamoRouteImport } from './routes/chi-siamo'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EventiSlugRouteImport } from './routes/eventi.$slug'
+import { Route as EnEventsRouteImport } from './routes/en.events'
+import { Route as EnContactRouteImport } from './routes/en.contact'
+import { Route as EnCharityRouteImport } from './routes/en.charity'
+import { Route as EnAboutRouteImport } from './routes/en.about'
+import { Route as EnEventsSlugRouteImport } from './routes/en.events.$slug'
 
 const SocialeRoute = SocialeRouteImport.update({
   id: '/sociale',
@@ -24,6 +30,11 @@ const SocialeRoute = SocialeRouteImport.update({
 const EventiRoute = EventiRouteImport.update({
   id: '/eventi',
   path: '/eventi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnRoute = EnRouteImport.update({
+  id: '/en',
+  path: '/en',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContattiRoute = ContattiRouteImport.update({
@@ -46,31 +57,74 @@ const EventiSlugRoute = EventiSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => EventiRoute,
 } as any)
+const EnEventsRoute = EnEventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnContactRoute = EnContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnCharityRoute = EnCharityRouteImport.update({
+  id: '/charity',
+  path: '/charity',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnAboutRoute = EnAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnEventsSlugRoute = EnEventsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => EnEventsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/chi-siamo': typeof ChiSiamoRoute
   '/contatti': typeof ContattiRoute
+  '/en': typeof EnRouteWithChildren
   '/eventi': typeof EventiRouteWithChildren
   '/sociale': typeof SocialeRoute
+  '/en/about': typeof EnAboutRoute
+  '/en/charity': typeof EnCharityRoute
+  '/en/contact': typeof EnContactRoute
+  '/en/events': typeof EnEventsRouteWithChildren
   '/eventi/$slug': typeof EventiSlugRoute
+  '/en/events/$slug': typeof EnEventsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/chi-siamo': typeof ChiSiamoRoute
   '/contatti': typeof ContattiRoute
+  '/en': typeof EnRouteWithChildren
   '/eventi': typeof EventiRouteWithChildren
   '/sociale': typeof SocialeRoute
+  '/en/about': typeof EnAboutRoute
+  '/en/charity': typeof EnCharityRoute
+  '/en/contact': typeof EnContactRoute
+  '/en/events': typeof EnEventsRouteWithChildren
   '/eventi/$slug': typeof EventiSlugRoute
+  '/en/events/$slug': typeof EnEventsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/chi-siamo': typeof ChiSiamoRoute
   '/contatti': typeof ContattiRoute
+  '/en': typeof EnRouteWithChildren
   '/eventi': typeof EventiRouteWithChildren
   '/sociale': typeof SocialeRoute
+  '/en/about': typeof EnAboutRoute
+  '/en/charity': typeof EnCharityRoute
+  '/en/contact': typeof EnContactRoute
+  '/en/events': typeof EnEventsRouteWithChildren
   '/eventi/$slug': typeof EventiSlugRoute
+  '/en/events/$slug': typeof EnEventsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -78,31 +132,50 @@ export interface FileRouteTypes {
     | '/'
     | '/chi-siamo'
     | '/contatti'
+    | '/en'
     | '/eventi'
     | '/sociale'
+    | '/en/about'
+    | '/en/charity'
+    | '/en/contact'
+    | '/en/events'
     | '/eventi/$slug'
+    | '/en/events/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/chi-siamo'
     | '/contatti'
+    | '/en'
     | '/eventi'
     | '/sociale'
+    | '/en/about'
+    | '/en/charity'
+    | '/en/contact'
+    | '/en/events'
     | '/eventi/$slug'
+    | '/en/events/$slug'
   id:
     | '__root__'
     | '/'
     | '/chi-siamo'
     | '/contatti'
+    | '/en'
     | '/eventi'
     | '/sociale'
+    | '/en/about'
+    | '/en/charity'
+    | '/en/contact'
+    | '/en/events'
     | '/eventi/$slug'
+    | '/en/events/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ChiSiamoRoute: typeof ChiSiamoRoute
   ContattiRoute: typeof ContattiRoute
+  EnRoute: typeof EnRouteWithChildren
   EventiRoute: typeof EventiRouteWithChildren
   SocialeRoute: typeof SocialeRoute
 }
@@ -121,6 +194,13 @@ declare module '@tanstack/react-router' {
       path: '/eventi'
       fullPath: '/eventi'
       preLoaderRoute: typeof EventiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/en': {
+      id: '/en'
+      path: '/en'
+      fullPath: '/en'
+      preLoaderRoute: typeof EnRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contatti': {
@@ -151,8 +231,71 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EventiSlugRouteImport
       parentRoute: typeof EventiRoute
     }
+    '/en/events': {
+      id: '/en/events'
+      path: '/events'
+      fullPath: '/en/events'
+      preLoaderRoute: typeof EnEventsRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/contact': {
+      id: '/en/contact'
+      path: '/contact'
+      fullPath: '/en/contact'
+      preLoaderRoute: typeof EnContactRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/charity': {
+      id: '/en/charity'
+      path: '/charity'
+      fullPath: '/en/charity'
+      preLoaderRoute: typeof EnCharityRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/about': {
+      id: '/en/about'
+      path: '/about'
+      fullPath: '/en/about'
+      preLoaderRoute: typeof EnAboutRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/events/$slug': {
+      id: '/en/events/$slug'
+      path: '/$slug'
+      fullPath: '/en/events/$slug'
+      preLoaderRoute: typeof EnEventsSlugRouteImport
+      parentRoute: typeof EnEventsRoute
+    }
   }
 }
+
+interface EnEventsRouteChildren {
+  EnEventsSlugRoute: typeof EnEventsSlugRoute
+}
+
+const EnEventsRouteChildren: EnEventsRouteChildren = {
+  EnEventsSlugRoute: EnEventsSlugRoute,
+}
+
+const EnEventsRouteWithChildren = EnEventsRoute._addFileChildren(
+  EnEventsRouteChildren,
+)
+
+interface EnRouteChildren {
+  EnAboutRoute: typeof EnAboutRoute
+  EnCharityRoute: typeof EnCharityRoute
+  EnContactRoute: typeof EnContactRoute
+  EnEventsRoute: typeof EnEventsRouteWithChildren
+}
+
+const EnRouteChildren: EnRouteChildren = {
+  EnAboutRoute: EnAboutRoute,
+  EnCharityRoute: EnCharityRoute,
+  EnContactRoute: EnContactRoute,
+  EnEventsRoute: EnEventsRouteWithChildren,
+}
+
+const EnRouteWithChildren = EnRoute._addFileChildren(EnRouteChildren)
 
 interface EventiRouteChildren {
   EventiSlugRoute: typeof EventiSlugRoute
@@ -169,6 +312,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ChiSiamoRoute: ChiSiamoRoute,
   ContattiRoute: ContattiRoute,
+  EnRoute: EnRouteWithChildren,
   EventiRoute: EventiRouteWithChildren,
   SocialeRoute: SocialeRoute,
 }
