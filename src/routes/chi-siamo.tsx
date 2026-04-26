@@ -21,8 +21,8 @@ function ChiSiamoPage() {
          Marchebrick è la community di riferimento nelle Marche per tutti gli appassionati di mattoncini LEGO® (AFOL). Uniamo creatività, divertimento e condivisione per trasformare una passione in esperienze coinvolgenti per tutte le età. Organizziamo eventi, esposizioni e attività interattive dove fantasia e ingegno prendono vita: dai grandi diorami alle costruzioni dal vivo, ogni occasione è pensata per stupire, ispirare e far partecipare.
 
 
-
          Marchebrick è più di un’associazione... è un punto di incontro per chi ama costruire, immaginare e condividere.
+
 
          Entra anche tu nel nostro mondo… e inizia a costruire con noi!
        </div>
@@ -41,10 +41,10 @@ function ChiSiamoPage() {
           <h2 className="text-2xl font-semibold text-primary">Consiglio direttivo</h2>
           <div className="mt-4 text-lg text-muted-foreground space-y-4">
              <p className="text-justify">
-               Il Consiglio Direttivo è l’organo che guida e coordina le attività di Marchebrick, promuovendo iniziative, eventi e progetti per la crescita dell’associazione.
+               Il Consiglio Direttivo è l’organo che guida e coordina le attività di Marchebrick, promuovendo iniziative, eventi e progetti per la crescita dell’associazione. Il suo mandato dura 3 anni.
              </p>
             <p className="text-justify">
-              È composto da 5 membri eletti dall’Assemblea dei soci, in carica per 3 anni:
+              Quello attuale è stato eletto dall’Assemblea dei soci del 27/01/2026, ed è così composto:
             </p>
             <ul className="space-y-1">
               <li><strong className="font-semibold text-foreground">Presidente:</strong> Stefano Zannini</li>
