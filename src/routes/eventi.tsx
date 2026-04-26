@@ -1,70 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { events } from "@/data/events";
+import { translations } from "@/i18n/translations";
+import { EventsPage } from "@/components/pages/EventsPage";
 
 export const Route = createFileRoute("/eventi")({
   head: () => ({
     meta: [
-      { title: "Eventi — Marchebrick" },
-      { name: "description", content: "Tutti gli eventi e le esposizioni di Marchebrick: passati, presenti e futuri." },
-      { property: "og:title", content: "Eventi Marchebrick" },
-      { property: "og:description", content: "Esposizioni, fiere e raduni di mattoncini con Marchebrick." },
+      { title: translations.events.metaTitle.it },
+      { name: "description", content: translations.events.metaDesc.it },
+      { property: "og:title", content: translations.events.metaTitle.it },
+      { property: "og:description", content: translations.events.metaDesc.it },
     ],
   }),
-  component: EventiPage,
+  component: EventsPage,
 });
-
-const categories = ["Tutti", "Eventi", "Girovagando", "Sociale"] as const;
-
-function EventiPage() {
-  const [filter, setFilter] = useState<(typeof categories)[number]>("Tutti");
-  const list = filter === "Tutti" ? events : events.filter((e) => e.category === filter);
-
-  return (
-    <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-      <span className="text-sm font-semibold uppercase tracking-wider text-primary">Eventi</span>
-      <h1 className="mt-3 text-4xl font-bold sm:text-5xl">Tutti i nostri appuntamenti</h1>
-      <p className="mt-4 max-w-2xl text-muted-foreground">
-        Esposizioni, fiere, raduni e iniziative sociali. Filtra per categoria.
-      </p>
-
-      <div className="mt-8 flex flex-wrap gap-2">
-        {categories.map((c) => (
-          <button
-            key={c}
-            onClick={() => setFilter(c)}
-            className={
-              filter === c
-                ? "rounded-full border-2 border-black bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
-                : "rounded-full border-2 border-black bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary/70"
-            }
-          >
-            {c}
-          </button>
-        ))}
-      </div>
-
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {list.map((e) => (
-          <Link
-            key={e.slug}
-            to="/eventi/$slug"
-            params={{ slug: e.slug }}
-            className="group block overflow-hidden rounded-2xl border-2 border-black bg-card shadow-sm transition-shadow hover:shadow-xl"
-          >
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={e.image} alt={e.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              <span className="tag-lego absolute left-3 top-3 rounded-full border-2 border-black px-3 py-1 text-xs font-semibold">{e.category}</span>
-            </div>
-            <div className="p-5">
-              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">{e.date}</p>
-              <h3 className="mt-2 text-lg font-semibold leading-snug">{e.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{e.excerpt}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-}
