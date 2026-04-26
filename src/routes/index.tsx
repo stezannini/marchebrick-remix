@@ -55,17 +55,17 @@ function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
         <div className="grid gap-6 md:grid-cols-3">
           {[
-            { icon: Calendar, title: "Eventi & Esposizioni", text: "Organizziamo e partecipiamo a manifestazioni in tutta Italia." },
-            { icon: Users, title: "Una community", text: "AFOL, famiglie e curiosi: il mattoncino unisce tutte le età." },
-            { icon: Heart, title: "Marchebrick per il sociale", text: "Iniziative benefiche e progetti per il territorio marchigiano." },
-          ].map(({ icon: Icon, title, text }) => (
-            <div key={title} className="rounded-2xl border-2 border-lego-dark-red bg-card p-6 transition-shadow hover:shadow-lg">
+            { icon: Calendar, title: "Eventi & Esposizioni", text: "Organizziamo e partecipiamo a manifestazioni in tutta Italia.", to: "/eventi" as const },
+            { icon: Users, title: "Una community", text: "AFOL, famiglie e curiosi: il mattoncino unisce tutte le età.", to: "/chi-siamo" as const },
+            { icon: Heart, title: "Marchebrick per il sociale", text: "Iniziative benefiche e progetti per il territorio marchigiano.", to: "/sociale" as const },
+          ].map(({ icon: Icon, title, text, to }) => (
+            <Link key={title} to={to} className="block rounded-2xl border-2 border-lego-dark-red bg-card p-6 transition-shadow hover:shadow-lg">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <Icon className="h-6 w-6" />
               </div>
               <h3 className="mt-4 text-xl font-semibold">{title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{text}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
