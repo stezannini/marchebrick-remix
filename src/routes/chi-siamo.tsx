@@ -70,7 +70,7 @@ function ChiSiamoPage() {
 
              Non sono tollerati comportamenti offensivi, discriminatori o che possano danneggiare la community o i suoi membri.
 
-             Far parte di Marchebrick significa condividere valori, passione e impegno nel costruire esperienze positive for tutti.
+             Far parte di Marchebrick significa condividere valori, passione e impegno nel costruire esperienze positive per tutti.
            </div>
         </section>
       </div>
