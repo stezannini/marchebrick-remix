@@ -38,7 +38,7 @@ function ChiSiamoPage() {
       </div>
       <div className="mt-16 space-y-12">
         <section>
-          <h2 className="text-2xl font-semibold text-primary">Consiglio direttivo</h2>
+          <h2 className="text-2xl font-semibold text-primary">Consiglio Direttivo</h2>
           <div className="mt-4 text-lg text-muted-foreground space-y-4">
              <p className="text-justify">
                Il Consiglio Direttivo è l’organo che guida e coordina le attività di Marchebrick, promuovendo iniziative, eventi e progetti per la crescita dell’associazione. Il suo mandato dura 3 anni.
