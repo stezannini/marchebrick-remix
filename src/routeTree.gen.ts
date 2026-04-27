@@ -15,6 +15,7 @@ import { Route as EnRouteImport } from './routes/en'
 import { Route as ContattiRouteImport } from './routes/contatti'
 import { Route as ChiSiamoRouteImport } from './routes/chi-siamo'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EnIndexRouteImport } from './routes/en.index'
 import { Route as EventiSlugRouteImport } from './routes/eventi.$slug'
 import { Route as EnEventsRouteImport } from './routes/en.events'
 import { Route as EnContactRouteImport } from './routes/en.contact'
@@ -51,6 +52,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const EnIndexRoute = EnIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EnRoute,
 } as any)
 const EventiSlugRoute = EventiSlugRouteImport.update({
   id: '/$slug',
@@ -95,13 +101,13 @@ export interface FileRoutesByFullPath {
   '/en/contact': typeof EnContactRoute
   '/en/events': typeof EnEventsRouteWithChildren
   '/eventi/$slug': typeof EventiSlugRoute
+  '/en/': typeof EnIndexRoute
   '/en/events/$slug': typeof EnEventsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/chi-siamo': typeof ChiSiamoRoute
   '/contatti': typeof ContattiRoute
-  '/en': typeof EnRouteWithChildren
   '/eventi': typeof EventiRouteWithChildren
   '/sociale': typeof SocialeRoute
   '/en/about': typeof EnAboutRoute
@@ -109,6 +115,7 @@ export interface FileRoutesByTo {
   '/en/contact': typeof EnContactRoute
   '/en/events': typeof EnEventsRouteWithChildren
   '/eventi/$slug': typeof EventiSlugRoute
+  '/en': typeof EnIndexRoute
   '/en/events/$slug': typeof EnEventsSlugRoute
 }
 export interface FileRoutesById {
@@ -124,6 +131,7 @@ export interface FileRoutesById {
   '/en/contact': typeof EnContactRoute
   '/en/events': typeof EnEventsRouteWithChildren
   '/eventi/$slug': typeof EventiSlugRoute
+  '/en/': typeof EnIndexRoute
   '/en/events/$slug': typeof EnEventsSlugRoute
 }
 export interface FileRouteTypes {
@@ -140,13 +148,13 @@ export interface FileRouteTypes {
     | '/en/contact'
     | '/en/events'
     | '/eventi/$slug'
+    | '/en/'
     | '/en/events/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/chi-siamo'
     | '/contatti'
-    | '/en'
     | '/eventi'
     | '/sociale'
     | '/en/about'
@@ -154,6 +162,7 @@ export interface FileRouteTypes {
     | '/en/contact'
     | '/en/events'
     | '/eventi/$slug'
+    | '/en'
     | '/en/events/$slug'
   id:
     | '__root__'
@@ -168,6 +177,7 @@ export interface FileRouteTypes {
     | '/en/contact'
     | '/en/events'
     | '/eventi/$slug'
+    | '/en/'
     | '/en/events/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -223,6 +233,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/en/': {
+      id: '/en/'
+      path: '/'
+      fullPath: '/en/'
+      preLoaderRoute: typeof EnIndexRouteImport
+      parentRoute: typeof EnRoute
     }
     '/eventi/$slug': {
       id: '/eventi/$slug'
@@ -286,6 +303,7 @@ interface EnRouteChildren {
   EnCharityRoute: typeof EnCharityRoute
   EnContactRoute: typeof EnContactRoute
   EnEventsRoute: typeof EnEventsRouteWithChildren
+  EnIndexRoute: typeof EnIndexRoute
 }
 
 const EnRouteChildren: EnRouteChildren = {
@@ -293,6 +311,7 @@ const EnRouteChildren: EnRouteChildren = {
   EnCharityRoute: EnCharityRoute,
   EnContactRoute: EnContactRoute,
   EnEventsRoute: EnEventsRouteWithChildren,
+  EnIndexRoute: EnIndexRoute,
 }
 
 const EnRouteWithChildren = EnRoute._addFileChildren(EnRouteChildren)
