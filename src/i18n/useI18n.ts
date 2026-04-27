@@ -12,8 +12,8 @@ export function useT() {
   return {
     lang,
     t: (key: string) => translate(key, lang),
-    /** Prefix a path with /en if current lang is en. Pass IT path like "/eventi". */
-    p: (path: string) => (lang === "en" ? (path === "/" ? "/en" : `/en${path}`) : path),
+    /** Map an IT path to its localized equivalent for the current language. Pass IT path like "/eventi". */
+    p: (path: string) => (lang === "en" ? IT_TO_EN_PATH[path] ?? (path === "/" ? "/en" : `/en${path}`) : path),
   };
 }
 
