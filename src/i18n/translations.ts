@@ -77,7 +77,7 @@ export const translations = {
       en: "The story, mission and values of Marchebrick: brick enthusiasts from the Marche region.",
     },
     eyebrow: { it: "Chi siamo", en: "About us" },
-    title: { it: "Una passione che unisce le Marche", en: "A passion that unites the Marche region" },
+    title: { it: "Una passione che unisce le Marche", en: "A passion that unites Marche" },
     intro: {
       it: "Marchebrick è la community di riferimento nelle Marche per tutti gli appassionati di mattoncini LEGO® (AFOL). Uniamo creatività, divertimento e condivisione per trasformare una passione in esperienze coinvolgenti per tutte le età. Organizziamo eventi, esposizioni e attività interattive dove fantasia e ingegno prendono vita: dai grandi diorami alle costruzioni dal vivo, ogni occasione è pensata per stupire, ispirare e far partecipare.\n\n\nMarchebrick è più di un’associazione... è un punto di incontro per chi ama costruire, immaginare e condividere.\n\n\nEntra anche tu nel nostro mondo… e inizia a costruire con noi!",
       en: "Marchebrick is the leading community in the Marche region for all LEGO® brick enthusiasts (AFOL). We combine creativity, fun and sharing to turn a passion into engaging experiences for all ages. We organize events, exhibitions and interactive activities where imagination and ingenuity come to life: from large dioramas to live builds, every occasion is designed to amaze, inspire and involve.\n\n\nMarchebrick is more than an association... it is a meeting point for those who love to build, imagine and share.\n\n\nJoin our world too… and start building with us!",
