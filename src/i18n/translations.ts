@@ -32,7 +32,7 @@ export const translations = {
     badgeCommunity: { it: "Community AFOL · Marche", en: "AFOL Community · Marche" },
     badgeRlug: { it: "RLUG · Recognized LEGO® User Group", en: "RLUG · Recognized LEGO® User Group" },
     heroTitle: {
-      it: "Costruiamo emozioni, mattone dopo mattone",
+      it: "Costruiamo emozioni, un mattoncino alla volta",
       en: "Building emotions, brick by brick",
     },
     heroSubtitle: {
