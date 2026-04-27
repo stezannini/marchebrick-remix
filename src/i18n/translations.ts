@@ -32,8 +32,8 @@ export const translations = {
     badgeCommunity: { it: "Community AFOL · Marche", en: "AFOL Community · Marche" },
     badgeRlug: { it: "RLUG · Recognized LEGO® User Group", en: "RLUG · Recognized LEGO® User Group" },
     heroTitle: {
-      it: "Costruiamo emozioni, un mattoncino alla volta",
-       en: "Building emotions, one brick at a time",
+      it: "Costruiamo emozioni, mattone dopo mattone",
+      en: "Building emotions, brick by brick",
     },
     heroSubtitle: {
       it: "Marchebrick riunisce appassionati di mattoncini delle Marche e d'Italia: eventi, esposizioni, contest e iniziative per il sociale.",
