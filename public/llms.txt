@@ -1,0 +1,19 @@
+# Marchebrick
+
+> Marchebrick è il gruppo marchigiano di appassionati di mattoncini LEGO®: eventi, esposizioni e iniziative sociali in tutta Italia.
+
+## Pages
+
+- [Home](/): Panoramica della community Marchebrick e ultimi eventi.
+- [Chi siamo](/chi-siamo): Il gruppo, la missione e la community AFOL marchigiana.
+- [Eventi](/eventi): Esposizioni, contest e manifestazioni in cui Marchebrick partecipa o organizza.
+- [Sociale](/sociale): Iniziative benefiche realizzate con i mattoncini.
+- [Contatti](/contatti): Come scriverci e collaborare.
+
+## English
+
+- [Home](/en): Marchebrick brick community overview.
+- [About](/en/about): Who we are.
+- [Events](/en/events): Exhibitions and brick events.
+- [Charity](/en/charity): Charity initiatives.
+- [Contact](/en/contact): Get in touch.
