@@ -9,6 +9,10 @@ export const Route = createFileRoute("/en/events")({
       { name: "description", content: translations.events.metaDesc.en },
       { property: "og:title", content: translations.events.metaTitle.en },
       { property: "og:description", content: translations.events.metaDesc.en },
+      { property: "og:url", content: "https://marchebrick.lovable.app/en/events" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://marchebrick.lovable.app/en/events" },
     ],
   }),
   component: EventsPage,

@@ -9,6 +9,10 @@ export const Route = createFileRoute("/chi-siamo")({
       { name: "description", content: translations.about.metaDesc.it },
       { property: "og:title", content: translations.about.metaTitle.it },
       { property: "og:description", content: translations.about.metaDesc.it },
+      { property: "og:url", content: "https://marchebrick.lovable.app/chi-siamo" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://marchebrick.lovable.app/chi-siamo" },
     ],
   }),
   component: AboutPage,
