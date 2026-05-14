@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SocialeRouteImport } from './routes/sociale'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as EventiRouteImport } from './routes/eventi'
 import { Route as EnRouteImport } from './routes/en'
 import { Route as ContattiRouteImport } from './routes/contatti'
@@ -26,6 +27,11 @@ import { Route as EnEventsSlugRouteImport } from './routes/en.events.$slug'
 const SocialeRoute = SocialeRouteImport.update({
   id: '/sociale',
   path: '/sociale',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EventiRoute = EventiRouteImport.update({
@@ -95,6 +101,7 @@ export interface FileRoutesByFullPath {
   '/contatti': typeof ContattiRoute
   '/en': typeof EnRouteWithChildren
   '/eventi': typeof EventiRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sociale': typeof SocialeRoute
   '/en/about': typeof EnAboutRoute
   '/en/charity': typeof EnCharityRoute
@@ -109,6 +116,7 @@ export interface FileRoutesByTo {
   '/chi-siamo': typeof ChiSiamoRoute
   '/contatti': typeof ContattiRoute
   '/eventi': typeof EventiRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sociale': typeof SocialeRoute
   '/en/about': typeof EnAboutRoute
   '/en/charity': typeof EnCharityRoute
@@ -125,6 +133,7 @@ export interface FileRoutesById {
   '/contatti': typeof ContattiRoute
   '/en': typeof EnRouteWithChildren
   '/eventi': typeof EventiRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sociale': typeof SocialeRoute
   '/en/about': typeof EnAboutRoute
   '/en/charity': typeof EnCharityRoute
@@ -142,6 +151,7 @@ export interface FileRouteTypes {
     | '/contatti'
     | '/en'
     | '/eventi'
+    | '/sitemap.xml'
     | '/sociale'
     | '/en/about'
     | '/en/charity'
@@ -156,6 +166,7 @@ export interface FileRouteTypes {
     | '/chi-siamo'
     | '/contatti'
     | '/eventi'
+    | '/sitemap.xml'
     | '/sociale'
     | '/en/about'
     | '/en/charity'
@@ -171,6 +182,7 @@ export interface FileRouteTypes {
     | '/contatti'
     | '/en'
     | '/eventi'
+    | '/sitemap.xml'
     | '/sociale'
     | '/en/about'
     | '/en/charity'
@@ -187,6 +199,7 @@ export interface RootRouteChildren {
   ContattiRoute: typeof ContattiRoute
   EnRoute: typeof EnRouteWithChildren
   EventiRoute: typeof EventiRouteWithChildren
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SocialeRoute: typeof SocialeRoute
 }
 
@@ -197,6 +210,13 @@ declare module '@tanstack/react-router' {
       path: '/sociale'
       fullPath: '/sociale'
       preLoaderRoute: typeof SocialeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/eventi': {
@@ -333,6 +353,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContattiRoute: ContattiRoute,
   EnRoute: EnRouteWithChildren,
   EventiRoute: EventiRouteWithChildren,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SocialeRoute: SocialeRoute,
 }
 export const routeTree = rootRouteImport

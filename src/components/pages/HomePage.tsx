@@ -13,7 +13,7 @@ export function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={hero} alt="" className="h-full w-full object-cover" width={1920} height={1080} />
+          <img src={hero} alt="" className="h-full w-full object-cover" width={1920} height={1080} fetchPriority="high" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-24 lg:px-8 lg:py-32">

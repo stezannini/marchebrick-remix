@@ -18,6 +18,38 @@ export const Route = createFileRoute("/en/events/$slug")({
           { property: "og:description", content: localized(loaderData.excerpt, "en") },
           { property: "og:image", content: loaderData.image },
           { property: "twitter:image", content: loaderData.image },
+          { property: "og:url", content: `https://marchebrick.lovable.app/en/events/${loaderData.slug}` },
+          { property: "og:type", content: "article" },
+        ]
+      : [],
+    links: loaderData
+      ? [{ rel: "canonical", href: `https://marchebrick.lovable.app/en/events/${loaderData.slug}` }]
+      : [],
+    scripts: loaderData
+      ? [
+          {
+            type: "application/ld+json",
+            children: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Event",
+              name: localized(loaderData.title, "en"),
+              description: localized(loaderData.excerpt, "en"),
+              image: loaderData.image,
+              startDate: localized(loaderData.date, "en"),
+              eventStatus: "https://schema.org/EventScheduled",
+              eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+              location: {
+                "@type": "Place",
+                name: "Marche, Italy",
+                address: { "@type": "PostalAddress", addressRegion: "Marche", addressCountry: "IT" },
+              },
+              organizer: {
+                "@type": "Organization",
+                name: "Marchebrick",
+                url: "https://marchebrick.lovable.app/",
+              },
+            }),
+          },
         ]
       : [],
   }),

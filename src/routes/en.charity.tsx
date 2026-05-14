@@ -9,6 +9,10 @@ export const Route = createFileRoute("/en/charity")({
       { name: "description", content: translations.social.metaDesc.en },
       { property: "og:title", content: translations.social.metaTitle.en },
       { property: "og:description", content: translations.social.metaDesc.en },
+      { property: "og:url", content: "https://marchebrick.lovable.app/en/charity" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://marchebrick.lovable.app/en/charity" },
     ],
   }),
   component: SocialPage,

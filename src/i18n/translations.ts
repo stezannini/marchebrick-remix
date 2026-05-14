@@ -22,7 +22,7 @@ export const translations = {
   // Home page
   home: {
     metaTitle: {
-      it: "Marchebrick — Eventi e passione per i mattoncini nelle Marche",
+      it: "Marchebrick — Eventi e mattoncini nelle Marche",
       en: "Marchebrick — Brick events and passion in the Marche region",
     },
     metaDesc: {
